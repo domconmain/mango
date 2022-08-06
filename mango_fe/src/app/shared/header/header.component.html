@@ -1,0 +1,58 @@
+<mat-toolbar >
+  <mat-toolbar-row id="mini" style="max-height: 30px" fxLayoutAlign="space-between" >
+
+    <div class="locale">
+        <span mat-button [matMenuTriggerFor]="menuL">
+          {{(getCurrLanguage() | async)?.value}}<mat-icon class="min-bar-icon">keyboard_arrow_down</mat-icon>
+        </span>
+      <mat-menu #menuL="matMenu"  xPosition="after">
+        <button mat-menu-item *ngFor="let lang of availableLanguages$ | async"  (click)="toggleLanguage(lang)">{{lang.value}}</button>
+      </mat-menu>
+    </div>
+    <div class="locale curr">
+      <span>Currency: </span><span mat-button [matMenuTriggerFor]="menuC">{{(getCurrCurrency() | async)?.value}}<mat-icon class="min-bar-icon">keyboard_arrow_down</mat-icon></span>
+      <mat-menu #menuC="matMenu"  xPosition="after">
+        <button mat-menu-item *ngFor="let currency of getCurrencies() | async" (click)="toggleCurrency(currency)">{{currency?.value}}</button>
+      </mat-menu>
+    </div>
+    <div class="locale help" >
+      <mat-icon class="min-bar-icon" >phone</mat-icon>Any question? Call Us +987 123 654
+    </div>
+    <div class="mini-spacer"></div>
+    <div class="socials-box" flex fxLayout="row" >
+      <a href="#"><fa-icon [icon]="['fab', 'facebook']"></fa-icon></a>
+      <a href="#"><fa-icon [icon]="['fab', 'twitter']"></fa-icon></a>
+      <a href="#"><fa-icon [icon]="['fab', 'youtube']"></fa-icon></a>
+      <a href="#"><fa-icon [icon]="['fab', 'linkedin']"></fa-icon></a>
+      <a href="#"><fa-icon [icon]="['fab', 'instagram']"></fa-icon></a>
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row style="min-height: 100px; background-color: white; color: black; ">
+    <div class="header-middle">
+      <div class="logo-wrapper">
+            <a id="logo" href="#"><img src="assets/img/logo-3.png" alt=""></a>
+<!--        <a id="logo" href="#"><img  src="assets/img/fiver_logos/logo2_transparent_bg.png" alt=""></a>-->
+
+      </div>
+      <div class="middle-entry">
+        <a class="icon-entry" href="#">
+          <span class="header-image"> <mat-icon class="min-bar-icon" >phone</mat-icon></span>
+          <span class="header-text"> <b>Contact Info</b> <br> (+48) 500 700 600</span>
+        </a>
+        <a class="icon-entry" href="#">
+          <span class="header-image"><mat-icon class="min-bar-icon" >directions_car</mat-icon></span>
+          <span class="header-text"> <b>Free Shipping</b> <br> on order over $200</span>
+        </a>
+      </div>
+
+      <div class="right-entries">
+        <!--    <a class="header-functionality-entry open-search-popup" href="#"><i class="fa fa-search"></i><span>Search</span></a>-->
+        <a class="header-functionality-entry" href="#"><mat-icon class="min-bar-icon">compare_arrows</mat-icon><span>Compare</span></a>
+        <a class="header-functionality-entry" href="#"><mat-icon class="material-symbols-outlined" >favorite_outline</mat-icon><span>Wishlist</span></a>
+        <a class="header-functionality-entry open-cart-popup" href="#"><i class="fa fa-shopping-cart"></i><span>My Cart</span> <b>$255,99</b></a>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+

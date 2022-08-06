@@ -1,0 +1,55 @@
+{
+  "languages": [
+    {
+      "name": "en",
+      "value": "English",
+      "curr": false
+    },
+    {
+      "name": "ps",
+      "value": "Spanish",
+      "curr": false
+    },
+    {
+      "name": "am",
+      "value": "Amharic",
+      "curr": true
+    }
+  ],
+  "currencies": [
+    {
+      "name": "usDollar",
+      "value": "$ USD",
+      "curr": false
+    },
+    {
+      "name": "cdDollar",
+      "value": "$ CAD",
+      "curr": false
+    },
+    {
+      "name": "euro",
+      "value": "€ EUR",
+      "curr": false
+    },
+    {
+      "name": "birr",
+      "value": "Birr",
+      "curr": true
+    }
+  ],
+  "categories": [
+
+    {"name": "appliances", "thumbnail": "Appliances"},
+    {"name": "roofing", "thumbnail": "roofing"},
+    {"name": "carpentry", "thumbnail": "carpentry"},
+    {"name": "plumbing", "thumbnail": "plumbing"},
+    {"name": "plumbing", "thumbnail": "plumbing"},
+    {"name": "plumbing", "thumbnail": "plumbing"},
+    {"name": "plumbing", "thumbnail": "plumbing"},
+    {"name": "plumbing", "thumbnail": "plumbing"}
+  ],
+  "users": [
+    {"userid":  "1", "username": "testusername"}
+  ]
+}
